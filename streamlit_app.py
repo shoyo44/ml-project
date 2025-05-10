@@ -61,7 +61,24 @@ prediction=clf.predict(input_a)
 prob=clf.predict_proba(input_a)
 data_f=pd.DataFrame(prob)
 data_f.columns = ['Adelie', 'Chinstrap', 'Gentoo']
-data_f
+with st.subheader("**Pediction of Species**")
+st.dataframe(data_f, olumn_config={
+           "Adelie": st.column_config.ProgressColumn('Adelie',
+                                                     format='%f',
+                                                     min_value=0,
+                                                     max_value=1),
+           "Gentoo": st.column_config.ProgressColumn('Gentoo',
+                                                     format='%f',
+                                                     min_value=0,
+                                                     max_value=1),
+            "Chinstrap": st.column_config.ProgressColumn('Chinstrap',
+                                                     format='%f',
+                                                     min_value=0,
+                                                     max_value=1)}
+             ,hide_index=True)
+penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
+st.success(str(penguins_species[prediction][0]))
+ 
 
                        
 
