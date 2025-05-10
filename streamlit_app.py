@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from sklearn import tree
+from sklearn.ensemble import RandomForestClassifier
 st.title('Machine learning app')
 st.info('Predicts species about penguins')
 with st.expander('Data'):
@@ -55,7 +55,7 @@ with st.expander('Data Preparation'):
    input_a
    st.write('**Encoded Dependent Values (Y)**')
    input_enc
-clf = tree.DecisionTreeClassifier()
+clf = RandomForestClassifier()
 clf.fit(x,input_enc)
 prediction=clf.predict(input_a)
 prob=clf.predict_proba(input_a)
