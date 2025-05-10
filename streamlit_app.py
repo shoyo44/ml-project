@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-
+from sklearn import tree
 st.title('Machine learning app')
 st.info('Predicts species about penguins')
 with st.expander('Data'):
@@ -55,6 +55,12 @@ with st.expander('Data Preparation'):
    input_a
    st.write('**Encoded Dependent Values (Y)**')
    input_enc
-st.subheader('Predicted Species')
+clf = tree.DecisionTreeClassifier()
+clf.fit(x,input_enc)
+prediction=clf.predict(input_a)
+prob=clf.predict_proba(input_a)
+data_f=pd.DataFrame(prob)
+data_f
+
                        
 
