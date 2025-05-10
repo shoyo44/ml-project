@@ -1,6 +1,6 @@
 # 📦 Machine Learning App
 ```
-⬆️ (Replace above with your app's name)
+⬆️ predicts information about penguins
 ```
 
 Description of the app ...
