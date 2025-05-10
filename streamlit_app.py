@@ -51,7 +51,7 @@ def encode_x(val):
   return target_dict[val]
 input_enc=Y_raw.apply(encode_x)
 with st.expander('Data Preparation'):
-   st.write("**Encoded Independent Values (X)")
+   st.write("**Encoded Independent Values (X)**")
    input_a
    st.write('**Encoded Dependent Values (Y)**')
    input_enc
