@@ -46,6 +46,6 @@ with st.expander('Data preparation'):
   input_a=df_penguins[:1]
   x=df_penguins[1:]
   st.write("**Prepared Independent data**")
-  input_a
+  df_penguins
                                                
 
