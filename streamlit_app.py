@@ -11,5 +11,8 @@ with st.expander('Data'):
   st.write('**Indepemdent Data (X)**')
   X_raw=data.drop('species',axis=1)
   X_raw
+  st.write('**Dependent Data (Y)**')
+  Y=data.species
+  Y
  
 
