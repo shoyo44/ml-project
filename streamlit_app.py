@@ -7,7 +7,7 @@ st.info('Predicts species about penguins')
 with st.expander('Data'):
   st.write('**Raw Data**')
   data=pd.read_csv("https://raw.githubusercontent.com/shoyo44/ml-project/refs/heads/master/penguins_data.csv")
-  
+  data
  
  
 
