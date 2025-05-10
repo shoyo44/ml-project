@@ -26,4 +26,5 @@ with st.sidebar:
   body_mass_g=st.slider('body_mass',333,6300,3340)
   bill_depth_mm=st.slider('Bill Depth',1.9,,333,,54)
   sex=st.selectbox('Gender',('Male','Female'))
-  
+
+
