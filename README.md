@@ -7,7 +7,8 @@ Description of the app ...
 
 ## Demo App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+This app solely focuses on giving the information about the penguins and their characteristics
+The app link is as follows:https://ml-project44.streamlit.app/
 
 ## GitHub Codespaces
 
