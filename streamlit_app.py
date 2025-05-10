@@ -9,7 +9,7 @@ with st.expander('Data'):
   data=pd.read_csv("https://raw.githubusercontent.com/shoyo44/ml-project/refs/heads/master/penguins_data.csv")
   data
   st.write('**Indepemdent Data (X)**')
-  X_raw=data.drop('species',axis=1)
+  X_raw=data.drop(['species','Unnamed: 6'],axis=1)
   X_raw
   st.write('**Dependent Data (Y)**')
   Y=data.species
@@ -21,3 +21,9 @@ with st.expander('Data Visualization'):
 with st.sidebar:
   st.header('Input features')
   island=st.selectbox('Island',('Torgersen', 'Biscoe', 'Dream'))
+  bill_length_mm=st.slider('Bill Length',5.4,333,75)
+  flipper_length_mm=st.slider('Flipper Length',14.01,,333,193)
+  body_mass_g=st.slider('body_mass',333,6300,3340)
+  bill_depth_mm=st.slider('Bill Depth',1.9,,333,,54)
+  sex=st.selectbox('Gender',('Male','Female'))
+  
