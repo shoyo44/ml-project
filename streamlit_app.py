@@ -60,8 +60,8 @@ clf.fit(x,input_enc)
 prediction=clf.predict(input_a)
 prob=clf.predict_proba(input_a)
 data_f=pd.DataFrame(prob)
-data_f.columns = ['Adelie', 'Chinstrap', 'Gentoo']
-data_f.rename(columns={'Adelie':'a', 'Chinstrap':'b', 'Gentoo':'c'})
+data_f.columns = ['a','b','c']
+
 
 data_f
 
