@@ -21,10 +21,10 @@ with st.expander('Data Visualization'):
 with st.sidebar:
   st.header('Input features')
   island=st.selectbox('Island',('Torgersen', 'Biscoe', 'Dream'))
-  bill_length_mm=st.slider('Bill Length',5.1,333.6,75.9)
-  flipper_length_mm=st.slider('Flipper Length',14.0,333.0,193.0)
-  body_mass_g=st.slider('body_mass',333.0,6300.0,3340.0)
-  bill_depth_mm=st.slider('Bill Depth',1.1,333.5,54.2)
+  bill_length_mm=st.slider('Bill Length',32.1,59.6,43.9)
+  flipper_length_mm=st.slider('Flipper Length',172.0,231.0,200.9)
+  body_mass_g=st.slider('body_mass',2700.0,6300.0,4207.0)
+  bill_depth_mm=st.slider('Bill Depth',13.1,21.5,17.1)
   sex=st.selectbox('Gender',('Male','Female'))
 
 
