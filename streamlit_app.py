@@ -12,8 +12,8 @@ with st.expander('Data'):
   X_raw=data.drop(['species','Unnamed: 6'],axis=1)
   X_raw
   st.write('**Dependent Data (Y)**')
-  Y=data.species
-  Y
+  Y_raw=data.species
+  Y_raw
 with st.expander('Data Visualization'):
   st.scatter_chart(data=data,x='body_mass_g',x_label="Body Mass",y='flipper_length_mm',y_label="Flipper Length",color='species')
   st.line_chart(data=data,x='species',x_label="Species",y='island',y_label="Island")
@@ -39,13 +39,16 @@ with st.expander('Input Features'):
   input_data
   st.write("**Combined data**")
   input_penguins
+
+
 encode=['island','sex']
 df_penguins=pd.get_dummies(input_penguins,prefix=encode)
 
-with st.expander('Data preparation'):
-  input_a=df_penguins[:1]
-  x=df_penguins[1:]
-  st.write("**Prepared Independent data**")
-  df_penguins
-                                               
+input_a=df_penguins[:1]
+x=df_penguins[1:]
+target_dict={''Adelie':0, 'Gentoo':1, 'Chinstrap':2}
+def encode_x(val):
+  return target_dict[val]
+input_enc=Y_raw.apply(encode_x)
+                       
 
