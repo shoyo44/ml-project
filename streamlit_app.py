@@ -76,6 +76,8 @@ st.dataframe(data_f, column_config={
                                                      min_value=0,
                                                      max_value=1)}
              ,hide_index=True)
+st.write("**Enter the info of the Species**")
+input_data
 penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
 st.success(str(penguins_species[prediction][0]))
 
