@@ -17,4 +17,5 @@ with st.expander('Data'):
 with st.expander('Data Visualization'):
   st.scatter_chart(data=data,x='body_mass_g',x_label="Body Mass",y='flipper_length_mm',y_label="Flipper Length",color='species')
   st.line_chart(data=data,x='species',x_label="Species",y='island',y_label="Island")
+  st.bar_char(data=data,x='species',y='island',color='sex')
 
