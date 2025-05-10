@@ -9,6 +9,6 @@ with st.expander('Data'):
   data=pd.read_csv("https://raw.githubusercontent.com/shoyo44/ml-project/refs/heads/master/penguins_data.csv")
   data
   st.write('**Dependent Data (X)**')
-  X_raw=data.species
+  X_raw=data
   X_raw
 
