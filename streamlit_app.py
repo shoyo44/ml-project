@@ -46,7 +46,7 @@ df_penguins=pd.get_dummies(input_penguins,prefix=encode)
 
 input_a=df_penguins[:1]
 x=df_penguins[1:]
-target_dict={''Adelie':0, 'Gentoo':1, 'Chinstrap':2}
+target_dict={'Adelie':0, 'Gentoo':1, 'Chinstrap':2}
 def encode_x(val):
   return target_dict[val]
 input_enc=Y_raw.apply(encode_x)
