@@ -62,6 +62,8 @@ prob=clf.predict_proba(input_a)
 data_f=pd.DataFrame(prob)
 data_f.columns = ['Adelie', 'Chinstrap', 'Gentoo']
 st.subheader("**Pediction of Species**")
+st.write("**Enter the info of the Species**")
+input_data
 st.dataframe(data_f, column_config={
            "Adelie": st.column_config.ProgressColumn('Adelie',
                                                      format='%f',
@@ -76,8 +78,6 @@ st.dataframe(data_f, column_config={
                                                      min_value=0,
                                                      max_value=1)}
              ,hide_index=True)
-st.write("**Enter the info of the Species**")
-input_data
 penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
 st.success(str(penguins_species[prediction][0]))
 
