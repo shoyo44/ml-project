@@ -19,4 +19,4 @@ with st.expander('Data Visualization'):
   st.line_chart(data=data,x='species',x_label="Species",y='island',y_label="Island")
   st.bar_chart(data=data,x='species',y='island',color='sex') 
 with st.sidebar('Input Features'):
-  st.selectbox('species',('Adelie', 'Gentoo', 'Chinstrap'))
+  st.selectbox('species','Adelie', 'Gentoo', 'Chinstrap')
