@@ -55,5 +55,6 @@ with st.expander('Data Preparation'):
    input_a
    st.write('**Encoded Dependent Values (Y)**')
    input_enc
+st.subheader('Predicted Species')
                        
 
