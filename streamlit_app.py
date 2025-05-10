@@ -62,7 +62,7 @@ prob=clf.predict_proba(input_a)
 data_f=pd.DataFrame(prob)
 data_f.columns = ['Adelie', 'Chinstrap', 'Gentoo']
 st.subheader("**Pediction of Species**")
-st.dataframe(data_f, olumn_config={
+st.dataframe(data_f, column_config={
            "Adelie": st.column_config.ProgressColumn('Adelie',
                                                      format='%f',
                                                      min_value=0,
