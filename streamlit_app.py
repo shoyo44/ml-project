@@ -32,7 +32,7 @@ dff={'island':island,
     'body_mass_g':body_mass_g,
     'bill_depth_mm':bill_depth_mm,
     'sex':sex}
-input_data=pd.DataFrame(dff,index=[0])
+input_data=pd.DataFrame(dff)
 input_penguins=pd.concat([input_data,X_raw],axis=0)
 with st.expander('Input Features'):
   st.write("**Input Data**")
