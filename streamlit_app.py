@@ -26,12 +26,12 @@ with st.sidebar:
   body_mass_g=st.slider('body_mass',2700.0,6300.0,4207.0)
   bill_depth_mm=st.slider('Bill Depth',13.1,21.5,17.1)
   sex=st.selectbox('Gender',('Male','Female'))
-dff={'island'=island,
-    'bill_length_mm'=bill_length_mm,
-    'flipper_length_mm'= flipper_length_mm,
-    'body_mass_g'=body_mass_g,
-    'bill_depth_mm'=bill_depth_mm,
-    'sex'=sex}
+dff={'island':island,
+    'bill_length_mm':bill_length_mm,
+    'flipper_length_mm':flipper_length_mm,
+    'body_mass_g':body_mass_g,
+    'bill_depth_mm':bill_depth_mm,
+    'sex':sex}
 input_data=pd.DataFrame(dff,index=[0])
 input_penguins=pd.concat([input_data,X_raw],axis=0)
 with st.expander('Input Features'):
