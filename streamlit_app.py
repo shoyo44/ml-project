@@ -8,7 +8,7 @@ with st.expander('Data'):
   st.write('**Raw Data**')
   data=pd.read_csv("https://raw.githubusercontent.com/shoyo44/ml-project/refs/heads/master/penguins_data.csv")
   data
-  st.write('**Indepemdent Data (X)**')
+  st.write('**Independent Data (X)**')
   X_raw=data.drop(['species','Unnamed: 6'],axis=1)
   X_raw
   st.write('**Dependent Data (Y)**')
@@ -39,6 +39,12 @@ with st.expander('Input Features'):
   input_data
   st.write("**Combined data**")
   input_penguins
-
+encode=['island','sex']
+df_penguins=pd.get_dummies(input_penguins,prefix=encode)
+with st.expander('Data preparation'):
+  input_a=df_penguins[:1]
+  x=df_penguins[1:]
+  st.write("**Prepared Independent data**")
+  x
                                                
 
